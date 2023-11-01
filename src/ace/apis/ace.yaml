@@ -1,0 +1,36 @@
+openapi: 3.0.0
+info:
+  version: 1.0.0
+  title: Dynamic apis
+  description: List of dynamic apis
+paths:
+  /ACE:
+    post:
+      operationId: NewFlow-Shabi
+      x-ace-flow: NewFlow-Shabi.yaml
+      x-ace-error-handlers: []
+      x-ace-secured: true
+      tags: []
+      summary: ""
+      description: test by the mighty shabi
+      parameters:
+        - in: path
+          name: bubu
+          required: true
+          description: bubu2
+          schema:
+            type: number
+        - in: query
+          name: cucu
+          required: false
+          description: cucu2
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: schemas/ACE.yaml
+      responses: {}
+components:
+  schemas: {}
